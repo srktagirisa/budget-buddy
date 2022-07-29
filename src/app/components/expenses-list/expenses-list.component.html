@@ -1,0 +1,55 @@
+<table style="border: 2px;">
+    <thead><tr><td><b>Bills</b></td></tr>
+    <tr><td><b>Description</b></td><td><b>Amount</b></td></tr>
+</thead>
+<div *ngFor="let expense of expenses">
+    <div *ngIf="expense.category === 'Bills'">
+        <tr>
+            <td>{{expense.description}}</td>
+            <td *ngIf="expense.amount > 0">{{expense.amount | currency}}</td>
+        </tr>
+    </div>
+</div>
+</table>
+<br/>
+<table style="border: 2px;">
+    <thead><tr><td><b>Food</b></td></tr>
+    <tr><td><b>Description</b></td><td><b>Amount</b></td></tr>
+</thead>
+<div *ngFor="let expense of expenses">
+    <div *ngIf="expense.category === 'Food'">
+        <tr>
+            <td>{{expense.description}}</td>
+            <td *ngIf="expense.amount > 0">{{expense.amount | currency}}</td>
+        </tr>
+    </div>
+</div>
+</table>
+<br/>
+<table style="border: 2px;">
+    <thead><tr><td><b>Entertainment</b></td></tr>
+    <tr><td><b>Description</b></td><td><b>Amount</b></td></tr>
+</thead>
+<div *ngFor="let expense of expenses">
+    <div *ngIf="expense.category === 'Entertainment'">
+        <tr>
+            <td>{{expense.description}}</td>
+            <td *ngIf="expense.amount > 0">{{expense.amount | currency}}</td>
+        </tr>
+    </div>
+</div>
+</table>
+<br/>
+<table style="border: 2px;">
+    <thead><tr><td><b>Travel</b></td></tr>
+    <tr><td><b>Description</b></td><td><b>Amount</b></td></tr>
+</thead>
+<div *ngFor="let expense of expenses">
+    <div *ngIf="expense.category === 'Travel'">
+        <tr>
+            <td>{{expense.description}}</td>
+            <td *ngIf="expense.amount > 0">{{expense.amount | currency}}</td>
+        </tr>
+    </div>
+</div>
+</table>
